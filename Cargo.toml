@@ -3,6 +3,6 @@ name = "musik"
 version = "0.1.0"
 authors = ["Deri herdianto <derryherdianto@gmail.com>"]
 
-[dependencies.gtk]
-version = "0.2.0"
-features = ["v3_22"]
+[dependencies]
+gtk = { version = "0.2", features = ["v3_22"] }
+gio = "0.2"
