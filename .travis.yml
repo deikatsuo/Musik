@@ -1,0 +1,9 @@
+language: rust
+sudo: false
+rust:
+  - stable
+script:
+  - cargo build --verbose
+notifications:
+  email:
+    on_success: never
