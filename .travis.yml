@@ -1,15 +1,19 @@
 os: linux
 language: rust
-sudo: false
+sudo: true
+env:
+  global:
+    - LD_LIBRARY_PATH=/usr/local/lib
+addons:
+  apt:
+    packages:
+      - libgtk-3-dev
 rust:
   - stable
   - beta
   - nightly
-before_script:
-  - pip install -v 'travis-cargo<0.2' --user && export PATH=$HOME/.local/bin:$PATH
-  - if [[ -e ~/Library/Python/2.7/bin ]]; then export PATH=~/Library/Python/2.7/bin:$PATH; fi
 script:
-  - travis-cargo build
+  - cargo build
 notifications:
   email:
     on_success: never
