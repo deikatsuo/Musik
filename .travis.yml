@@ -2,8 +2,7 @@ os: linux
 language: rust
 sudo: required
 env:
-  global:
-    - LD_LIBRARY_PATH=/usr/local/lib
+  - GTK=3.22
 addons:
   apt:
     packages:
